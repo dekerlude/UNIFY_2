@@ -1,0 +1,416 @@
+:root {
+
+    /* Updated Warm Cute Background */
+    --bg-color: #F9F1F7;
+    /* Soft Rosy Cream */
+
+    --card-bg: #FFFDF8;
+    --text-main: #4E4A57;
+    --text-muted: #8A8495;
+    --border-soft: #E7E3F5;
+
+    --accent: #D88C9A;
+    --sky: #CDE7F0;
+    --mint: #D8F3DC;
+    --butter: #F6D27A;
+}
+
+/* Periwinkle Mist */
+--card-bg: #FFFDF8;
+/* Warm Cream */
+--text-main: #4E4A57;
+--text-muted: #8A8495;
+--border-soft: #E7E3F5;
+
+--accent: #D88C9A;
+/* Dusty Roseberry */
+--sky: #CDE7F0;
+--mint: #D8F3DC;
+--butter: #F6D27A;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    color: var(--text-main);
+}
+
+/* ---------------- DOODLES ---------------- */
+
+.background-doodles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.doodle {
+    position: absolute;
+    opacity: 0.55;
+    animation: float 12s ease-in-out infinite alternate;
+}
+
+/* Spiral */
+.spiral {
+    width: 300px;
+    height: 300px;
+    top: -80px;
+    left: -80px;
+    border-radius: 50%;
+    border: 8px dashed var(--accent);
+}
+
+/* Heart */
+.heart {
+    width: 200px;
+    height: 180px;
+    bottom: 80px;
+    left: 80px;
+    background: var(--sky);
+    transform: rotate(-45deg);
+    border-radius: 50% 50% 0 0;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 180px;
+    background: var(--sky);
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -100px;
+}
+
+.heart::after {
+    left: 100px;
+}
+
+/* Zigzag */
+.zigzag {
+    width: 350px;
+    height: 120px;
+    top: 20%;
+    right: -100px;
+    background: repeating-linear-gradient(135deg,
+            var(--mint),
+            var(--mint) 20px,
+            transparent 20px,
+            transparent 40px);
+    border-radius: 60px;
+}
+
+/* Moon */
+.moon {
+    width: 240px;
+    height: 240px;
+    bottom: -70px;
+    right: -70px;
+    background: #F7D9E3;
+    border-radius: 50%;
+}
+
+.moon::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: var(--bg-color);
+    border-radius: 50%;
+    top: 30px;
+    left: 50px;
+}
+
+/* Bulb */
+.bulb {
+    width: 90px;
+    height: 130px;
+    top: 12%;
+    left: 20%;
+    border: 4px solid var(--butter);
+    border-radius: 50% 50% 40% 40%;
+}
+
+.bulb::after {
+    content: "";
+    position: absolute;
+    bottom: -18px;
+    left: 25%;
+    width: 40px;
+    height: 20px;
+    background: var(--butter);
+    border-radius: 5px;
+}
+
+/* Paw */
+.paw {
+    width: 22px;
+    height: 22px;
+    background: var(--mint);
+    border-radius: 50%;
+}
+
+.paw::before,
+.paw::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: var(--mint);
+    border-radius: 50%;
+}
+
+.paw::before {
+    top: -12px;
+    left: -8px;
+}
+
+.paw::after {
+    top: -12px;
+    right: -8px;
+}
+
+.paw1 {
+    top: 65%;
+    right: 18%;
+}
+
+.paw2 {
+    top: 72%;
+    right: 12%;
+}
+
+/* Star */
+.star {
+    width: 14px;
+    height: 14px;
+    background: #F7D9E3;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%,
+            79% 91%, 50% 70%, 21% 91%, 32% 57%,
+            2% 35%, 39% 35%);
+    top: 20%;
+    right: 22%;
+    animation: twinkle 4s infinite alternate;
+}
+
+/* Cloud */
+.cloud {
+    width: 140px;
+    height: 60px;
+    background: white;
+    top: 8%;
+    right: 10%;
+    border-radius: 50px;
+    opacity: 0.5;
+}
+
+.cloud::before,
+.cloud::after {
+    content: "";
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+.cloud::before {
+    width: 70px;
+    height: 70px;
+    top: -30px;
+    left: 20px;
+}
+
+.cloud::after {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    right: 15px;
+}
+
+/* Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(6deg);
+    }
+
+    100% {
+        transform: translateY(12px) rotate(-6deg);
+    }
+}
+
+@keyframes twinkle {
+    0% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: scale(1.3);
+        opacity: 1;
+    }
+}
+
+/* ---------------- CARD ---------------- */
+
+.card-container {
+    width: 100%;
+    max-width: 390px;
+    padding: 20px;
+    z-index: 1;
+}
+
+.login-card {
+    background: var(--card-bg);
+    padding: 55px 40px;
+    border-radius: 35px;
+    border: 3px solid #F2D3DB;
+    box-shadow: 0 25px 50px rgba(90, 70, 120, 0.08);
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 35px 70px rgba(90, 70, 120, 0.15);
+    border-color: var(--accent);
+}
+
+/* Typography */
+
+.heading {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 2.4rem;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    color: var(--accent);
+}
+
+/* Back Link */
+.back-link {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.5rem;
+    color: var(--text-main);
+    text-decoration: none;
+    z-index: 100;
+    cursor: none;
+}
+
+/* Custom Cursor & Hiding Default */
+body,
+a,
+button,
+input {
+    cursor: none;
+}
+
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--text-main);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: width 0.2s, height 0.2s, background-color 0.2s, border-color 0.2s;
+    mix-blend-mode: normal;
+}
+
+.custom-cursor.cursor-grow {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(216, 140, 154, 0.2);
+    /* Soft pink tint */
+    border-color: transparent;
+}
+
+.custom-cursor.cursor-ring {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid var(--accent);
+}
+
+/* Inputs */
+
+.input-group {
+    margin-bottom: 24px;
+}
+
+input {
+    width: 100%;
+    padding: 16px 18px;
+    border-radius: 22px;
+    border: 1px solid var(--border-soft);
+    font-size: 0.95rem;
+    background: white;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(216, 140, 154, 0.25);
+}
+
+/* Button */
+
+.btn-primary {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 25px;
+    background: var(--accent);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    background: #C97888;
+}
+
+/* Links */
+
+.forgot-password {
+    display: block;
+    margin-top: 16px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: var(--text-muted);
+}
+
+.footer-link {
+    margin-top: 35px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.footer-link a {
+    color: var(--accent);
+    text-decoration: none;
+}

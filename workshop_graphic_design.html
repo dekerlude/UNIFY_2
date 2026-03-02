@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Design - UNIFY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Patrick+Hand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="eventspage.css">
+    <style>
+        .detail-container {
+            max-width: 800px;
+            width: 90%;
+            margin-top: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: var(--charcoal-gray);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            color: var(--pastel-lavender);
+        }
+
+        .detail-card {
+            background-color: var(--mist-white);
+            border: 3px solid var(--charcoal-gray);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .detail-illustration {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            display: block;
+        }
+
+        .register-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background-color: var(--soft-mint);
+            border: 2px solid var(--charcoal-gray);
+            border-radius: 50px;
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.5rem;
+            color: var(--charcoal-gray);
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .register-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 4px 4px 0px var(--pastel-lavender);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-doodles">
+        <svg class="doodle palette-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10c0.5 0 1-0.5 1-1v-2c0-1.5 1.5-2 2-2 1.5 0 2-1.5 2-2v-1c0-1.5 1.5-2 2-2h1c1.5 0 2-1.5 2-2 0-3.5-3.5-8-10-8z"
+                fill="#9CDBC9" opacity="0.7" />
+            <circle cx="7.5" cy="7.5" r="1.5" fill="#FFFFFF" opacity="0.6" />
+            <circle cx="11.5" cy="11.5" r="1.5" fill="#FFFFFF" opacity="0.6" />
+            <circle cx="6.5" cy="12.5" r="1.5" fill="#FFFFFF" opacity="0.6" />
+        </svg>
+    </div>
+    <div class="custom-cursor"></div>
+    <div class="detail-container">
+        <a href="eventspage.html" class="back-link">← Back to Events</a>
+        <div class="detail-card">
+            <svg viewBox="0 0 100 100" class="detail-illustration">
+                <circle cx="50" cy="50" r="25" stroke="#9B96C7" stroke-width="4" />
+                <path d="M50 50L75 25" stroke="#2E2E2E" stroke-width="3" />
+                <rect x="20" y="60" width="20" height="20" fill="#A5D0EB" opacity="0.6" />
+            </svg>
+            <span class="category-tag">Workshops</span>
+            <h1 style="font-size: 3rem; margin: 20px 0;">Graphic Design</h1>
+            <div class="meta-info" style="justify-content: center; gap: 30px; margin-bottom: 30px; border: none;">
+                <span class="time" style="font-size: 1.2rem;">🕒 2:00 PM Sunday</span>
+                <span class="venue" style="font-size: 1.2rem;">📍 Computer Lab</span>
+            </div>
+            <p class="description" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                Learn the principles of design, color theory, and typography. Use Adobe Illustrator and Figma to create
+                stunning visuals. Perfect for aspiring UI/UX designers and digital artists.
+                <br><br>
+                <strong>Software:</strong> Figma (Free) & Illustrator (Provided).
+            </p>
+            <a href="#" class="register-btn">Start Designing</a>
+        </div>
+    </div>
+    <script src="homepage.js"></script>
+</body>
+
+</html>

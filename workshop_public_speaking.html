@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Speaking - UNIFY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Patrick+Hand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="eventspage.css">
+    <style>
+        .detail-container {
+            max-width: 800px;
+            width: 90%;
+            margin-top: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: var(--charcoal-gray);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            color: var(--pastel-lavender);
+        }
+
+        .detail-card {
+            background-color: var(--mist-white);
+            border: 3px solid var(--charcoal-gray);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .detail-illustration {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            display: block;
+        }
+
+        .register-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background-color: var(--soft-mint);
+            border: 2px solid var(--charcoal-gray);
+            border-radius: 50px;
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.5rem;
+            color: var(--charcoal-gray);
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .register-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 4px 4px 0px var(--pastel-lavender);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-doodles">
+        <svg class="doodle mic-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" fill="#A5D0EB" opacity="0.8" />
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2" stroke="#A5D0EB" stroke-width="2" stroke-linecap="round" />
+            <line x1="12" y1="19" x2="12" y2="23" stroke="#A5D0EB" stroke-width="2" stroke-linecap="round" />
+            <line x1="8" y1="23" x2="16" y2="23" stroke="#A5D0EB" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <svg class="doodle pulp-event" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M9 18H15M10 21H14M5.6 10C5.6 6.465 8.465 3.6 12 3.6C15.535 3.6 18.4 6.465 18.4 10C18.4 12.8 16.6 15.2 14 16H10C7.4 15.2 5.6 12.8 5.6 10Z"
+                stroke="#F3D6C6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8" />
+        </svg>
+    </div>
+    <div class="custom-cursor"></div>
+    <div class="detail-container">
+        <a href="eventspage.html" class="back-link">← Back to Events</a>
+        <div class="detail-card">
+            <svg viewBox="0 0 100 100" class="detail-illustration">
+                <path d="M40 30H60V70H40Z" stroke="#2E2E2E" stroke-width="3" />
+                <circle cx="50" cy="20" r="10" fill="#A5D0EB" opacity="0.6" />
+                <path d="M30 80H70" stroke="#2E2E2E" stroke-width="3" />
+            </svg>
+            <span class="category-tag">Workshops</span>
+            <h1 style="font-size: 3rem; margin: 20px 0;">Public Speaking</h1>
+            <div class="meta-info" style="justify-content: center; gap: 30px; margin-bottom: 30px; border: none;">
+                <span class="time" style="font-size: 1.2rem;">🕒 3:30 PM Today</span>
+                <span class="venue" style="font-size: 1.2rem;">📍 Seminar Hall</span>
+            </div>
+            <p class="description" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                Conquer your fear of the stage! Learn how to articulate your thoughts, control your body language, and
+                captivate an audience. Hosted by the renowned Toastmasters Club.
+                <br><br>
+                <strong>Session Focus:</strong> Impromptu speaking and elevator pitches.
+            </p>
+            <a href="#" class="register-btn">Reserve a Seat</a>
+        </div>
+    </div>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <script src="homepage.js"></script>
+</body>
+
+</html>

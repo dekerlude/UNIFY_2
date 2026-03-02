@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography 101 - UNIFY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Patrick+Hand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="eventspage.css">
+    <style>
+        .detail-container {
+            max-width: 800px;
+            width: 90%;
+            margin-top: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: var(--charcoal-gray);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            color: var(--pastel-lavender);
+        }
+
+        .detail-card {
+            background-color: var(--mist-white);
+            border: 3px solid var(--charcoal-gray);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .detail-illustration {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            display: block;
+        }
+
+        .register-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background-color: var(--soft-mint);
+            border: 2px solid var(--charcoal-gray);
+            border-radius: 50px;
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.5rem;
+            color: var(--charcoal-gray);
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .register-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 4px 4px 0px var(--pastel-lavender);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-doodles">
+        <svg class="doodle camera-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="6" width="20" height="14" rx="2" stroke="#2E2E2E" stroke-width="2" />
+            <circle cx="12" cy="13" r="4" stroke="#2E2E2E" stroke-width="2" />
+            <path d="M16 2h4v4h-4z" fill="#F3D6C6" opacity="0.8" />
+        </svg>
+    </div>
+    <div class="custom-cursor"></div>
+    <div class="detail-container">
+        <a href="eventspage.html" class="back-link">← Back to Events</a>
+        <div class="detail-card">
+            <svg viewBox="0 0 100 100" class="detail-illustration">
+                <rect x="25" y="30" width="50" height="40" fill="#9CDBC9" opacity="0.6" />
+                <circle cx="50" cy="50" r="12" stroke="#2E2E2E" stroke-width="3" />
+                <rect x="60" y="25" width="10" height="5" fill="#2E2E2E" />
+            </svg>
+            <span class="category-tag">Workshops</span>
+            <h1 style="font-size: 3rem; margin: 20px 0;">Photography 101</h1>
+            <div class="meta-info" style="justify-content: center; gap: 30px; margin-bottom: 30px; border: none;">
+                <span class="time" style="font-size: 1.2rem;">🕒 10:00 AM Sunday</span>
+                <span class="venue" style="font-size: 1.2rem;">📍 Studio</span>
+            </div>
+            <p class="description" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                Unlock the full potential of your camera! We'll cover the exposure triangle (ISO, Aperture, Shutter
+                Speed), composition rules, and basic editing. Bring your DSLR or just your phone!
+                <br><br>
+                <strong>Assignment:</strong> Capture the "Campus Golden Hour".
+            </p>
+            <a href="#" class="register-btn">Sign Up</a>
+        </div>
+    </div>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <script src="homepage.js"></script>
+</body>
+
+</html>

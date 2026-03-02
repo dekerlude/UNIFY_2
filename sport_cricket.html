@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inter-Hostel Cricket - UNIFY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Patrick+Hand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="eventspage.css">
+    <style>
+        .detail-container {
+            max-width: 800px;
+            width: 90%;
+            margin-top: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: var(--charcoal-gray);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            color: var(--pastel-lavender);
+        }
+
+        .detail-card {
+            background-color: var(--mist-white);
+            border: 3px solid var(--charcoal-gray);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .detail-illustration {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            display: block;
+        }
+
+        .register-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background-color: var(--soft-mint);
+            border: 2px solid var(--charcoal-gray);
+            border-radius: 50px;
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.5rem;
+            color: var(--charcoal-gray);
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .register-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 4px 4px 0px var(--pastel-lavender);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-doodles">
+        <svg class="doodle cloud-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.5 19C19.9853 19 22 16.9853 22 14.5C22 12.132 20.177 10.244 17.819 10.034C17.6 7.227 15.266 5 12.5 5C10.158 5 8.113 6.591 7.422 8.791C4.945 9.074 3 11.233 3 14C3 16.761 5.239 19 8 19H17.5Z"
+                fill="#FFFFFF" fill-opacity="0.9" />
+        </svg>
+        <svg class="doodle trophy-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M8 21h8m-4-9v9m-8-3a2 2 0 1 1-2-2c.4 0 .9.2 1.2.5l.8.8V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v12.3l.8-.8c.3-.3.8-.5 1.2-.5a2 2 0 1 1-2 2"
+                stroke="#EDBAA1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </div>
+    <div class="custom-cursor"></div>
+    <div class="detail-container">
+        <a href="eventspage.html" class="back-link">← Back to Events</a>
+        <div class="detail-card">
+            <svg viewBox="0 0 100 100" class="detail-illustration">
+                <circle cx="50" cy="50" r="15" fill="#9B96C7" />
+                <path d="M30 70L70 30" stroke="#2E2E2E" stroke-width="6" stroke-linecap="round" />
+            </svg>
+            <span class="category-tag">Sports</span>
+            <h1 style="font-size: 3rem; margin: 20px 0;">Inter-Hostel Cricket</h1>
+            <div class="meta-info" style="justify-content: center; gap: 30px; margin-bottom: 30px; border: none;">
+                <span class="time" style="font-size: 1.2rem;">🕒 2:00 PM Tomorrow</span>
+                <span class="venue" style="font-size: 1.2rem;">📍 Cricket Pitch</span>
+            </div>
+            <p class="description" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                T20 Match: Green House vs. Yellow House. Expect big hits and thrilling wickets in this high-stakes
+                match.
+                <br><br>
+                <strong>Updates:</strong> Live commentary available on campus radio.
+            </p>
+            <a href="#" class="register-btn">Match Fixtures</a>
+        </div>
+    </div>
+    <script src="homepage.js"></script>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <script src="homepage.js"></script>
+</body>
+
+</html>
