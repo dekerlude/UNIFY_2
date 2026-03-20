@@ -1,305 +1,27 @@
-:root {
-
-    /* Updated Warm Cute Background */
-    --bg-color: #F9F1F7;
-    /* Soft Rosy Cream */
-
-    --card-bg: #FFFDF8;
-    --text-main: #4E4A57;
-    --text-muted: #8A8495;
-    --border-soft: #E7E3F5;
-
-    --accent: #D88C9A;
-    --sky: #CDE7F0;
-    --mint: #D8F3DC;
-    --butter: #F6D27A;
-}
-
-/* Periwinkle Mist */
---card-bg: #FFFDF8;
-/* Warm Cream */
---text-main: #4E4A57;
---text-muted: #8A8495;
---border-soft: #E7E3F5;
-
---accent: #D88C9A;
-/* Dusty Roseberry */
---sky: #CDE7F0;
---mint: #D8F3DC;
---butter: #F6D27A;
-}
-
+/* Base Reset */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
 }
 
 body {
-    margin: 0;
-    font-family: 'Outfit', sans-serif;
-    background: var(--bg-color);
+    background-color: #FFF0F5;
+    /* Unify Lavender Blush */
+    /* Outer background, outside the card */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    overflow: hidden;
-    color: var(--text-main);
+    cursor: none;
+    /* Hide default cursor */
 }
 
-/* ---------------- DOODLES ---------------- */
-
-.background-doodles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
-}
-
-.doodle {
-    position: absolute;
-    opacity: 0.55;
-    animation: float 12s ease-in-out infinite alternate;
-}
-
-/* Spiral */
-.spiral {
-    width: 300px;
-    height: 300px;
-    top: -80px;
-    left: -80px;
-    border-radius: 50%;
-    border: 8px dashed var(--accent);
-}
-
-/* Heart */
-.heart {
-    width: 200px;
-    height: 180px;
-    bottom: 80px;
-    left: 80px;
-    background: var(--sky);
-    transform: rotate(-45deg);
-    border-radius: 50% 50% 0 0;
-}
-
-.heart::before,
-.heart::after {
-    content: "";
-    position: absolute;
-    width: 200px;
-    height: 180px;
-    background: var(--sky);
-    border-radius: 50%;
-}
-
-.heart::before {
-    top: -100px;
-}
-
-.heart::after {
-    left: 100px;
-}
-
-/* Zigzag */
-.zigzag {
-    width: 350px;
-    height: 120px;
-    top: 20%;
-    right: -100px;
-    background: repeating-linear-gradient(135deg,
-            var(--mint),
-            var(--mint) 20px,
-            transparent 20px,
-            transparent 40px);
-    border-radius: 60px;
-}
-
-/* Moon */
-.moon {
-    width: 240px;
-    height: 240px;
-    bottom: -70px;
-    right: -70px;
-    background: #F7D9E3;
-    border-radius: 50%;
-}
-
-.moon::after {
-    content: "";
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    background: var(--bg-color);
-    border-radius: 50%;
-    top: 30px;
-    left: 50px;
-}
-
-/* Bulb */
-.bulb {
-    width: 90px;
-    height: 130px;
-    top: 12%;
-    left: 20%;
-    border: 4px solid var(--butter);
-    border-radius: 50% 50% 40% 40%;
-}
-
-.bulb::after {
-    content: "";
-    position: absolute;
-    bottom: -18px;
-    left: 25%;
-    width: 40px;
-    height: 20px;
-    background: var(--butter);
-    border-radius: 5px;
-}
-
-/* Paw */
-.paw {
-    width: 22px;
-    height: 22px;
-    background: var(--mint);
-    border-radius: 50%;
-}
-
-.paw::before,
-.paw::after {
-    content: "";
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    background: var(--mint);
-    border-radius: 50%;
-}
-
-.paw::before {
-    top: -12px;
-    left: -8px;
-}
-
-.paw::after {
-    top: -12px;
-    right: -8px;
-}
-
-.paw1 {
-    top: 65%;
-    right: 18%;
-}
-
-.paw2 {
-    top: 72%;
-    right: 12%;
-}
-
-/* Star */
-.star {
-    width: 14px;
-    height: 14px;
-    background: #F7D9E3;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%,
-            79% 91%, 50% 70%, 21% 91%, 32% 57%,
-            2% 35%, 39% 35%);
-    top: 20%;
-    right: 22%;
-    animation: twinkle 4s infinite alternate;
-}
-
-/* Cloud */
-.cloud {
-    width: 140px;
-    height: 60px;
-    background: white;
-    top: 8%;
-    right: 10%;
-    border-radius: 50px;
-    opacity: 0.5;
-}
-
-.cloud::before,
-.cloud::after {
-    content: "";
-    position: absolute;
-    background: white;
-    border-radius: 50%;
-}
-
-.cloud::before {
-    width: 70px;
-    height: 70px;
-    top: -30px;
-    left: 20px;
-}
-
-.cloud::after {
-    width: 80px;
-    height: 80px;
-    top: -40px;
-    right: 15px;
-}
-
-/* Animations */
-@keyframes float {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-
-    50% {
-        transform: translateY(-20px) rotate(6deg);
-    }
-
-    100% {
-        transform: translateY(12px) rotate(-6deg);
-    }
-}
-
-@keyframes twinkle {
-    0% {
-        transform: scale(1);
-        opacity: 0.4;
-    }
-
-    100% {
-        transform: scale(1.3);
-        opacity: 1;
-    }
-}
-
-/* ---------------- CARD ---------------- */
-
-.card-container {
-    width: 100%;
-    max-width: 390px;
-    padding: 20px;
-    z-index: 1;
-}
-
-.login-card {
-    background: var(--card-bg);
-    padding: 55px 40px;
-    border-radius: 35px;
-    border: 3px solid #F2D3DB;
-    box-shadow: 0 25px 50px rgba(90, 70, 120, 0.08);
-    text-align: center;
-    transition: 0.4s ease;
-}
-
-.login-card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 35px 70px rgba(90, 70, 120, 0.15);
-    border-color: var(--accent);
-}
-
-/* Typography */
-
-.heading {
-    font-family: 'Patrick Hand', cursive;
-    font-size: 2.4rem;
-    letter-spacing: 3px;
-    margin-bottom: 40px;
-    color: var(--accent);
+a,
+button,
+input {
+    cursor: none !important;
 }
 
 /* Back Link */
@@ -309,27 +31,20 @@ body {
     left: 30px;
     font-family: 'Patrick Hand', cursive;
     font-size: 1.5rem;
-    color: var(--text-main);
+    color: #111;
     text-decoration: none;
     z-index: 100;
-    cursor: none;
 }
 
-/* Custom Cursor & Hiding Default */
-body,
-a,
-button,
-input {
-    cursor: none;
-}
-
+/* Custom Cursor Styles */
 .custom-cursor {
     position: fixed;
     top: 0;
     left: 0;
     width: 20px;
     height: 20px;
-    border: 2px solid var(--text-main);
+    border: 2px solid #9B96C7;
+    /* Unify Lavender */
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
@@ -341,8 +56,8 @@ input {
 .custom-cursor.cursor-grow {
     width: 50px;
     height: 50px;
-    background-color: rgba(216, 140, 154, 0.2);
-    /* Soft pink tint */
+    background-color: rgba(155, 150, 199, 0.2);
+    /* Soft lavender tint */
     border-color: transparent;
 }
 
@@ -350,67 +65,356 @@ input {
     width: 40px;
     height: 40px;
     background-color: transparent;
-    border: 2px solid var(--accent);
+    border: 2px solid #9B96C7;
+    /* Unify Lavender */
 }
 
-/* Inputs */
+/* Writing Stick Cursor */
+.custom-cursor.cursor-write {
+    width: 4px;
+    height: 30px;
+    background-color: #3E3B36;
+    /* Dark Ink */
+    border: none;
+    border-radius: 2px;
+}
+
+/* Magnetic Cursor Snap */
+.custom-cursor.cursor-magnetic {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(155, 150, 199, 0.3);
+    /* Soft Lavender */
+    border: 3px dashed #9B96C7;
+    animation: magneticSpin 4s linear infinite;
+}
+
+@keyframes magneticSpin {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Main Wrapper */
+.login-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    padding: 20px;
+}
+
+/* Scribble Card */
+.scribble-card {
+    background: #FFFAF0;
+    /* Warm off-white paper */
+    width: 100%;
+    max-width: 450px;
+    padding: 50px 40px;
+    border: 3px solid #3E3B36;
+    /* Dark ink stroke */
+    /* Extremely playful, wonky border radius */
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    box-shadow: 12px 12px 0px rgba(155, 150, 199, 0.4);
+    /* Lavender block shadow */
+    position: relative;
+    transform: rotate(-1deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scribble-card:hover {
+    transform: rotate(0deg) translateY(-5px);
+    box-shadow: 15px 15px 0px rgba(155, 150, 199, 0.6);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 3.5rem;
+    font-family: 'Patrick Hand', cursive;
+    color: #3E3B36;
+    /* Ink */
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    text-decoration: underline wavy #A5D0EB;
+    /* Blue squiggly underline */
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-family: 'Patrick Hand', cursive;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Form Styles */
+.scribble-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
 .input-group {
-    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-group label {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.4rem;
+    color: #3E3B36;
+    margin-left: 10px;
 }
 
 input {
     width: 100%;
-    padding: 16px 18px;
-    border-radius: 22px;
-    border: 1px solid var(--border-soft);
-    font-size: 0.95rem;
-    background: white;
-    transition: 0.3s;
+    padding: 15px 20px;
+    background-color: transparent;
+    border: 2px dashed #9B96C7;
+    /* Lavender dashed outline */
+    border-radius: 10px 20px 10px 20px;
+    font-size: 1.2rem;
+    font-family: 'Patrick Hand', cursive;
+    color: #3E3B36;
+    outline: none;
+    transition: all 0.3s;
+}
+
+input::placeholder {
+    color: #b5b5b5;
 }
 
 input:focus {
-    outline: none;
-    border-color: var(--accent);
-    box-shadow: 0 0 0 4px rgba(216, 140, 154, 0.25);
+    background-color: rgba(155, 150, 199, 0.1);
+    border-style: solid;
+    transform: scale(1.02);
 }
 
-/* Button */
-
-.btn-primary {
+/* The login button */
+.login-btn {
     width: 100%;
-    padding: 16px;
-    border: none;
-    border-radius: 25px;
-    background: var(--accent);
+    padding: 15px;
+    background-color: #EDBAA1;
+    /* Warm Peach */
+    color: #3E3B36;
+    border: 3px solid #3E3B36;
+    border-radius: 30px 10px 30px 10px;
+    /* Wonky button */
+    font-size: 1.6rem;
+    font-family: 'Patrick Hand', cursive;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: all 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #f7a683;
+    transform: translateY(-3px) rotate(1deg);
+    box-shadow: 5px 5px 0px rgba(62, 59, 54, 1);
+    /* Ink shadow */
+}
+
+.login-btn:active {
+    transform: translateY(2px) rotate(-1deg);
+    box-shadow: 1px 1px 0px rgba(62, 59, 54, 1);
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    position: relative;
+    margin: 30px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 2px;
+    background: repeating-linear-gradient(to right, #ccc, #ccc 5px, transparent 5px, transparent 10px);
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+.divider span {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.2rem;
+    color: #888;
+    background: #FFFAF0;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Social media icons below */
+.social-login {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.social-icon {
+    color: #3E3B36;
+    text-decoration: none;
+    transition: transform 0.2s, color 0.2s;
+    background: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #3E3B36;
+    box-shadow: 3px 3px 0px rgba(62, 59, 54, 0.4);
+}
+
+.social-icon:hover {
     color: white;
-    font-weight: 500;
-    cursor: pointer;
-    transition: 0.3s;
+    background: #A5D0EB;
+    /* Light Blue */
+    transform: translateY(-3px) rotate(-5deg);
 }
 
-.btn-primary:hover {
-    transform: translateY(-3px);
-    background: #C97888;
+/* Specific styling to make the Google 'G' colorful */
+.google-icon i {
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
-/* Links */
-
-.forgot-password {
-    display: block;
-    margin-top: 16px;
-    font-size: 0.85rem;
-    text-decoration: none;
-    color: var(--text-muted);
+.google-icon:hover i {
+    filter: brightness(0.9);
 }
 
-.footer-link {
-    margin-top: 35px;
-    font-size: 0.9rem;
-    color: var(--text-muted);
+/* Footer sign up link */
+.signup-link {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-family: 'Patrick Hand', cursive;
+    color: #666;
+    text-align: center;
 }
 
-.footer-link a {
-    color: var(--accent);
-    text-decoration: none;
+.signup-link a {
+    color: #3E3B36;
+    font-weight: bold;
+    text-decoration: underline wavy #EDBAA1;
+    margin-left: 5px;
+}
+
+.signup-link a:hover {
+    color: #9B96C7;
+    /* Lavender */
+}
+
+/* Background Doodles Animations (Copied from Homepage) */
+.background-doodles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.doodle {
+    position: absolute;
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+.star-1 {
+    top: 15%;
+    left: 15%;
+    width: 40px;
+    animation-duration: 7s;
+}
+
+.flower-1 {
+    top: 80%;
+    right: 10%;
+    width: 50px;
+    animation-duration: 5.5s;
+}
+
+.cloud-1 {
+    top: 10%;
+    right: 20%;
+    width: 60px;
+    animation-duration: 8s;
+}
+
+.plane-1 {
+    top: 60%;
+    left: 8%;
+    width: 45px;
+    animation-duration: 6.5s;
+}
+
+.heart-1 {
+    top: 30%;
+    right: 8%;
+    width: 35px;
+    animation-duration: 5s;
+}
+
+.sparkle-1 {
+    top: 20%;
+    right: 25%;
+    width: 30px;
+    animation-duration: 4s;
+}
+
+.sparkle-2 {
+    top: 70%;
+    left: 20%;
+    width: 25px;
+    animation-duration: 6s;
+}
+
+.planet-1 {
+    top: 40%;
+    left: 10%;
+    width: 55px;
+    animation-duration: 9s;
+}
+
+.butterfly-1 {
+    top: 85%;
+    right: 30%;
+    width: 40px;
+    animation-duration: 4.5s;
 }
