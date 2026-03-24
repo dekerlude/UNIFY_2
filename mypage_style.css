@@ -21,7 +21,7 @@ body {
     color: var(--ink-color);
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 60px 20px;
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
@@ -41,7 +41,8 @@ body {
 
 .doodle {
     position: absolute;
-    stroke: var(--ink-color);
+    color: var(--ink-color);
+    stroke: currentColor;
     stroke-width: 5;
     /* Bolder! */
     stroke-linecap: round;
@@ -148,6 +149,7 @@ body {
     max-width: 900px;
     padding: 20px;
     position: relative;
+    margin: auto;
 }
 
 /* Profile Card - Mac Window / Sketch Pad Hybrid */
